@@ -1,3 +1,2 @@
 # dia-tanarno-projektek
-📂 - Hallooween
-
+📂 - Hallooween - 🎃 Saját őszi/halloween-i weboldal: Pumkin Spice
