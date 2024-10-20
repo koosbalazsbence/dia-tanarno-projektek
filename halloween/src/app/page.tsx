@@ -1,96 +1,101 @@
-import Image from "next/image"
+"use client"
+import { useState, useEffect } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import LayoutGrid from "../components/LayoutGrid"
+import { Moon, Sun } from "lucide-react"
 
-export default function Home() {
+export default function HalloweenPage() {
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [darkMode])
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1 className="text-4xl font-bold text-center sm:text-left">
-          Halloween
-        </h1>
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={`min-h-screen p-12 ${darkMode ? 'bg-gray-900' : 'bg-orange-100'} transition-colors duration-500`}>
+      <div className="container mx-auto px-4 py-8">
+        <header className="flex justify-between items-center mb-8">
+          <h1 className={`text-4xl md:text-6xl font-bold ${darkMode ? 'text-[#d76b00]' : 'text-purple-800'} font-halloween`}>
+            Pumpkin Spice <span>avagy mit jelent számomra a Halloween...</span>
+          </h1>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setDarkMode(!darkMode)}
+            className={`${darkMode ? 'bg-orange-500 text-gray-900 hover:bg-gray-800' : 'bg-purple-800 text-orange-100 hover:bg-orange-100'} rounded-full p-2 outline-none`}
+          >
+            {darkMode ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
+          </Button>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <Card className={`${darkMode ? 'bg-gray-900 text-orange-100' : 'bg-orange-200 text-purple-900'} mb-8`}>
+          <CardHeader>
+            <CardTitle className="text-2xl md:text-3xl font-spooky">A halloween számomra</CardTitle>
+            <CardDescription className={`${darkMode ? 'text-gray-400' : 'text-purple-700'}`}>
+              A Halloween és Mindenszentek és Halottak napja
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-lg space-y-4">
+            <p>
+              A Halloweent már kisgyerekkorman - amire legalább is még emlékszem, nem nagyon tartottuk/ünnepeltük meg, vagyis azt ami Amerikában szokás, hogy házró-házra járunk és beöltözünk. Annyit csináltunk, hogy Októberben beöltöztünk az iskolában és ott tudtuk egymást ilyesztegetni, és mindenféle más programokon részt venni. Az például nagyon tetszett.
+            </p>
+            <p>
+              Iskolában voltak propramok mint például tökfaragás, vagy amint már említettem korábban be lehetett öltözni valamilyen jelmezbe és hogyha a jelmez elég ilyesztő volt, akkor lehetett a jelmezes versenyen nyerni.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={`${darkMode ? 'bg-gray-900 text-orange-100' : 'bg-orange-200 text-purple-900'} mb-8`}>
+          <CardHeader>
+            <CardTitle className="text-2xl md:text-3xl font-spooky">A korbábbi évek kezdeményezései itt Szeghalmon</CardTitle>
+          </CardHeader>
+          <CardContent className='text-lg'>
+            <p>
+              Az elmúlt évben viszont volt itt Szeghalmon egy kezdeményezés, ahol ezt a halloweeni érzést át tudtam élni. Be lehetett öltözni valami ilyesztőnek és ezzel a jelmezzel díjakat nyerni. Illetve ezt megelőzően volt ruhás felvonulás is itt a parkban. További programok is voltak. A helyieknek nagyon tesztett, különösen a gyerekeknek.
+            </p>
+            <p className='mt-4'>Az elkészült képek itt tekinthetőek meg:</p>
+            <div className="text-center">
+              <a className='text-orange-500' href="https://www.facebook.com/mariadela.puszedli/posts/pfbid02BTZWub8vLpgwPefHFQjCkckQ4L4tnCasW9nvhUYDWEsvm65rC3mh4JSVLhhXUoT3l">I. sorozat</a>
+              <br />
+              <a className='text-orange-500' href="https://www.facebook.com/mariadela.puszedli/posts/pfbid02rcavL4rHndUsw5AsE15PUymNLCvRn7QxHmc6MUM45FJaFXi9ee62yfsaVzpV6DFtl">II. sorozat</a></div>
+            <LayoutGrid />
+          </CardContent>
+        </Card>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <Card className={`${darkMode ? 'bg-gray-800 text-orange-100' : 'bg-orange-200 text-purple-900'}`}>
+            <CardHeader>
+              <CardTitle className="text-xl font-spooky">A Halloween Magyarországon</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                A Halloween egyre népszerűbb ünnep Magyarországon, bár nem rendelkezik mély kulturális hagyományokkal a magyar társadalomban. Az ünnep eredetileg az angolszász országokból, elsősorban az Egyesült Államokból terjedt el, és a fiatalabb generációk, valamint a kereskedelem népszerűsítették. Október 31-én tartják, és jellemzően jelmezbálokkal, tökfaragással, valamint ijesztő dekorációkkal ünneplik.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className={`${darkMode ? 'bg-gray-800 text-orange-100' : 'bg-orange-200 text-purple-900'}`}>
+            <CardHeader>
+              <CardTitle className="text-xl font-spooky">...és Amerikában</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                Az Egyesült Államokban a Halloween az egyik legnépszerűbb ünnep, amelyet minden évben október 31-én tartanak. Az ünnep eredete a kelta Samhain fesztiválra vezethető vissza, amikor az emberek úgy hitték, hogy ezen az éjszakán a szellemek világának kapui megnyílnak, és a holtak szellemei visszatérnek a földre. A kereszténység elterjedésével a Samhain fokozatosan összeolvadt a Mindenszentek előestéjével, az „All Hallows’ Eve”-vel, ami később Halloweenné rövidült.
+              </p>
+            </CardContent>
+          </Card>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <footer className="mt-12 text-center">
+          <p className={`${darkMode ? 'text-orange-500' : 'text-purple-800'} font-halloween text-4xl`}>
+            Boldog Halloweent! 🎃👻
+          </p>
+        </footer>
+      </div>
     </div>
   )
 }
