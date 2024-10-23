@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -9,6 +18,18 @@
   padding: 0;
   margin: 0;
   user-select: none;
+}
+
+@-moz-document url-prefix() {
+  .castleIntroBtn {
+    font-weight: 800 !important;
+  }
+}
+
+@supports (-webkit-appearance: none) {
+  .castleIntroBtn {
+    font-weight: 100;
+  }
 }
 
 @layer utilities {
