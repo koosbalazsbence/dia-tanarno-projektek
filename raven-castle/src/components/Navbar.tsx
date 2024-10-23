@@ -1,18 +1,22 @@
+import Link from "next/link"
+
 // components
+import ThemeSwitch from "./ThemeSwitch"
 import Tickets from "./Button"
 import LanguageDropdown from "./LanguageDropdown"
 
 export default function Navbar() {
     return (
-        <header className="w-11/12 flex items-center justify-between mx-auto h-24 p-4 font-playfair">
-            <h1 className="text-4xl">Hollóvár</h1>
+        <header className="w-[95%] flex items-center justify-between mx-auto h-24 p-4 font-playfair">
+            <Link href="/" className="text-4xl">Hollóvár</Link>
             <div className="flex justify-center items-center gap-10 p-4">
-                <h2 className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Programok</h2>
-                <h2 className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Nyitvatarás</h2>
-                <h2 className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Kapcsolatok</h2>
-                <h2 className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Árak</h2>
+                <Link href="/events" className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Programok</Link>
+                <Link href="/opening" className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Nyitvatarás</Link>
+                <Link href="/contact" className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Kapcsolatok</Link>
+                <Link href="/pricing" className="text-2xl hover:text-[#bfa826] transition duration-200 ease-in-out">Árak</Link>
                 <LanguageDropdown />
                 <Tickets />
+                <ThemeSwitch />
             </div>
         </header>
     )
