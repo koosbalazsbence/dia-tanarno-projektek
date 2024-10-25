@@ -71,10 +71,10 @@ export default function Sponsors() {
                             className="flex-shrink-0 px-2"
                             style={{ width: itemWidth, height: itemHeight }}
                         >
-                            <Card className="h-full bg-gray-800 backdrop-blur-2xl border-gray-700 hover:bg-gray-900 transition-colors duration-300">
+                            <Card className="h-full backdrop-blur-2xl bg-gradient-to-br from-[#1a202c] to-[#2d3748] border-gray-700 hover:bg-gray-900 transition-colors duration-300">
                                 <CardContent className="flex flex-col items-center justify-center h-full p-6">
                                     <h1 className="text-2xl text-center text-white font-extrabold">{card.header}</h1>
-                                    <p className="text-white text-center text-sm mt-2">{card.text}</p>
+                                    <p className="font-inter text-white text-center text-sm mt-2">{card.text}</p>
                                 </CardContent>
                             </Card>
                         </motion.div>

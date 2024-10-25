@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ImperialScript";
+  src: url("../fonts/ImperialScript-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -36,6 +42,10 @@ html::-webkit-scrollbar {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.leadingHeader{
+  font-family: "ImperialScript";
 }
 
 @layer base {

@@ -10,7 +10,7 @@ export default function LanguageDropdown() {
 
     return (
         <Select defaultValue={language} onValueChange={setLanguage}>
-            <SelectTrigger className="w-44">
+            <SelectTrigger className="w-44 outline-none focus-visible:ring-0">
                 <Globe className="mr-2 h-4 w-4" />
                 <SelectValue placeholder="Select language" />
             </SelectTrigger>
