@@ -25,7 +25,22 @@ export default function Home() {
         <Quote />
       </div>
       <div>
-        <h1 className="text-center text-3xl">Fedezze fel a várat és foglaljon időpontot még ma!</h1>
+        <h1 className="text-center text-3xl m-12">Fedezze fel a várat és foglaljon időpontot még ma!</h1>
+      </div>
+      <div className="grid grid-cols-3 gap-4 items-center justify-items-center border-2 border-red-500">
+        <div className="grid grid-rows-2 border-2 border-red-500">
+          <h1 className="text-2xl">Nyitvatartás</h1>
+          {/* TODO: Insert table HERE */}
+        </div>
+        <div className="grid grid-rows-2 border-2 border-red-500">
+          <h1 className="text-2xl">Megközelítés</h1>
+          {/* TODO: Insert text HERE */}
+        </div>
+        <div className="grid grid-rows-2 border-2 border-red-500">
+          <h1 className="text-2xl">Időpontfoglalás</h1>
+          Egyeztessen kollégáinkkal.
+          {/* TODO: Insert calendar HERE */}
+        </div>
       </div>
     </>
   );
