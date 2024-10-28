@@ -1,8 +1,13 @@
-# dia-tanarno-projektek
-📂 - Halloween - 🎃 Saját őszi/halloween-i weboldal: Pumkin Spice
+## 📂 - Halloween - 🎃 Saját őszi/halloween-i weboldal: Pumkin Spice
 
 ### Stack:
-- Frontend: Next.js
-- Styling: Tailwindcss
+- Next.js + React + Ts + Bun
+- Styling: Tailwindcss, AceternityUI, shadcnui for theme
 - Icons: Lucide Icons
-- Animations: AceternityUI
+
+## 📂 - Hollóvár projekt - 🏯 Hollóvár 
+
+### Stack:
+- Next.js + React + Ts + Bun
+- Styling: Motion.div, shadcnui, aceternityui
+- Icons: Lucide Icons, React Icons
