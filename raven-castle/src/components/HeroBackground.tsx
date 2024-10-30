@@ -1,9 +1,9 @@
-// import HeroImage from "./HeroImage"
+import HeroImage from "./HeroImage"
 
 export default function HeroBackgournd() {
     return (
         <div className="relative w-full min-h-screen flex flex-col items-center justify-center">
-            {/* <HeroImage /> */}
+            <HeroImage />
             <div className="font-serif absolute top-1/2 z-20 flex flex-col items-center gap-2 text-5xl text-white transform -translate-y-1/2">
                 <h1>Élmény.</h1>
                 <h1>Kaland.</h1>

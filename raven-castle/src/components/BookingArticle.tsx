@@ -1,6 +1,4 @@
-"use client"
 
-import { useState } from "react"
 import {
     Table,
     TableBody,
@@ -9,16 +7,14 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Calendar } from "@/components/ui/calendar"
 
 export default function BookingArticle() {
-    const [date, setDate] = useState<Date | undefined>(new Date())
     return (
         <>
             <div>
                 <h1 className="text-center text-3xl m-12">Fedezze fel a várat és foglaljon időpontot még ma!</h1>
-                <div className="grid grid-cols-3 gap-4 mx-4 items-center justify-items-center">
-                    <div className="grid p-2 pt-4 mx-4">
+                <div className="grid grid-cols-1 w-full lg:grid-cols-3 gap-4 px-4 py-8 items-center justify-items-center dark:bg-gray-700 dark:shadow-lg">
+                    <div className="w-full h-full grid p-2 pt-4 mx-4">
                         <h1 className="w-full text-2xl text-center">Nyitvatartás</h1>
                         <Table className="w-3/4 mx-auto border-collapse">
                             <TableHeader>
@@ -58,10 +54,10 @@ export default function BookingArticle() {
                                 </TableRow>
                             </TableBody>
                         </Table>
-                        <p className="text-sm mt-4 text-center">Kérjük, érkezés előtt tájékozódjon a vár esetleges változásairól vagy karbantartásáról!</p>
+                        <p className="text-sm mt-4 text-center font-semibold">Kérjük, érkezés előtt tájékozódjon a vár esetleges változásairól vagy karbantartásáról!</p>
                     </div>
-                    <div className="w-full grid grid-rows-2 p-2 pt-4 mx-4">
-                        <h1 className="text-2xl text-center">Megközelítés</h1>
+                    <div className="w-full h-full grid p-2 pt-4 mx-4">
+                        <h1 className="text-2xl text-center pb-4">Megközelítés</h1>
                         <h2>Ha szeretné felfedezni ezt a különleges történelmi helyszínt, több módon is megközelítheti:</h2>
                         <div className="">
                             <p className="m-4 p-1"><span className="font-semibold">Autóval és gyalogosan</span>: Induljon el Kőrétegpuszta irányába, ahol a várhoz legközelebbi parkoló található. Innen egy 2 km-es, enyhén emelkedő ösvény vezet át az erdőn, amely a vár bejáratához visz.</p>
@@ -70,15 +66,9 @@ export default function BookingArticle() {
                             <p className="m-4 p-1"><span className="font-semibold">Vezetett túra</span>: A helyi turisztikai iroda heti két alkalommal vezetett túrákat szervez a várhoz, amely magában foglalja a buszos utazást és a túravezetést az erdőn keresztül.</p>
                         </div>
                     </div>
-                    <div className="w-full grid grid-rows-2 p-2 pt-4 mx-4">
+                    <div className="w-full h-full grid p-2 pt-4 mx-4">
                         <h1 className="text-2xl text-center">Időpontfoglalás</h1>
-                        <p className="text-center text-sm font-light">Egyeztessen kollégáinkkal telefonon!</p>
-                        <Calendar
-                            mode="single"
-                            selected={date}
-                            onSelect={setDate}
-                            className="mx-auto rounded-md border"
-                        />
+                        <p className="text-center text-lg font-semibold">Egyeztessen kollégáinkkal telefonon!</p>
                     </div>
                 </div>
             </div>
