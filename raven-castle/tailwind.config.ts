@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
@@ -61,8 +61,14 @@ const config: Config = {
         playfair: ["Playfair Display", "serif"],
         monospace: ["Space Mono", "monospace"],
       },
+      screen: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1180px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
-export default config;
+}
+export default config
