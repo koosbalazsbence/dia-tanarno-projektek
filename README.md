@@ -1,13 +1,14 @@
-## 📂 - Halloween - 🎃 Saját őszi/halloween-i weboldal: Pumkin Spice
+> #### IKT_Projektmunka_II._2/14.A_2024/25
 
-### Stack:
-- Next.js + React + Ts + Bun
-- Styling: Tailwindcss, AceternityUI, shadcnui for theme
-- Icons: Lucide Icons
+## Tartalomjegyzék:
+#### 1. Projekt:  [*Pumkin spice... - Halloween - 🎃 Saját őszi/halloween-i weboldal*](#projectOne)
+#### 2. Project: [*Hollóvár projekt - 🏯 Hollóvár*](#projectTwo)
+#### 3. Project: [*Csapat-project - 👽 Egyszerű Reddit Klón?*](#projectThree)
 
-## 📂 - Hollóvár projekt - 🏯 Hollóvár 
+---
 
-### Stack:
-- Next.js + React + Ts + Bun
-- Styling: Motion.div, shadcnui, aceternityui
-- Icons: Lucide Icons, React Icons
+## Pumkin spice... - Halloween - 🎃 Saját őszi/halloween-i weboldal <a name="projectOne"></a>
+
+## Hollóvár projekt - 🏯 Hollóvár <a name="projectTwo"></a>
+
+## Csapat-projekt -> 👽 Egyszerű Reddit Klón? <a name="projectThree"></a>
