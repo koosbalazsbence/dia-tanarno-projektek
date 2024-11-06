@@ -9,6 +9,19 @@
 
 ## Pumkin spice... - Halloween - 🎃 Saját őszi/halloween-i weboldal <a name="projectOne"></a>
 
+#### - Nextjs 14 + React 19
+#### - Tailwindcss + shadcnui, radixui + Geist font
+#### - Framer-motion
+
+[LINK](https://github.com/koosbalazsbence/dia-tanarno-projektek/tree/main/halloween)
+
 ## Hollóvár projekt - 🏯 Hollóvár <a name="projectTwo"></a>
+
+#### - Nextjs 15 + React 19
+#### - Tailwindcss + shadcnui, radixui + Custom fonts (aceternityui?)
+#### - Framer-motion
+
+[LINK](https://github.com/koosbalazsbence/dia-tanarno-projektek/tree/hollovar/raven-castle)
+
 
 ## Csapat-projekt -> 👽 Egyszerű Reddit Klón? <a name="projectThree"></a>
