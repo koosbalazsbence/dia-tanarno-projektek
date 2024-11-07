@@ -25,3 +25,8 @@
 
 
 ## Csapat-projekt -> 👽 Egyszerű Reddit Klón? <a name="projectThree"></a>
+
+#### - Nextjs 15 + React 19
+#### - Tailwindcss + shadcnui, radixui + Custom fonts (aceternityui?)
+#### - Framer-motion
+#### - Adatbázis: SQL
