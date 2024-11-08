@@ -30,3 +30,5 @@
 #### - Tailwindcss + shadcnui, radixui + Custom fonts (aceternityui?)
 #### - Framer-motion
 #### - Adatbázis: SQL
+
+[LINK](https://github.com/koosbalazsbence/dia-tanarno-projektek/tree/main/halloween)
