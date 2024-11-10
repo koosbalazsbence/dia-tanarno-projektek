@@ -2,7 +2,7 @@
 
 ## Tartalomjegyzék:
 #### 1. Projekt:  [*Pumkin spice... - Halloween - 🎃 Saját őszi/halloween-i weboldal*](#projectOne)
-#### 2. Project: [*Hollóvár projekt - 🏯 Hollóvár*](#projectTwo)
+#### 2. Project: [*Hollóvár projekt - 🐤 Hollóvár*](#projectTwo)
 #### 3. Project: [*Csapat-project - 👽 Egyszerű Reddit Klón?*](#projectThree)
 
 ---
@@ -15,7 +15,7 @@
 
 [LINK](https://github.com/koosbalazsbence/dia-tanarno-projektek/tree/main/halloween)
 
-## Hollóvár projekt - 🏯 Hollóvár <a name="projectTwo"></a>
+## Hollóvár projekt - 🐤 Hollóvár <a name="projectTwo"></a>
 
 #### - Nextjs 15 + React 19
 #### - Tailwindcss + shadcnui, radixui + Custom fonts (aceternityui?)
