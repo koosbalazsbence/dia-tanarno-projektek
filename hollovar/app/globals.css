@@ -74,6 +74,7 @@ body {
 @layer base {
   * {
     @apply border-border;
+    @apply select-none;
   }
   body {
     @apply bg-background text-foreground;

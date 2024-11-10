@@ -24,8 +24,8 @@ export default function Navbar() {
       <Link href="/" className={`${imperialScript.className} text-5xl`}>
         Hollóvár
       </Link>
-      <div className="hidden justify-center items-center gap-10 p-4 lg:flex">
-        <CustomLink href="/programs">Programok</CustomLink>
+      <div className="hidden justify-center items-center gap-10 p-4 md:flex">
+        <CustomLink href="/programs">Események</CustomLink>
         <CustomLink href="/opening">Nyitvatartás</CustomLink>
         <CustomLink href="/contact">Kapcsolatok</CustomLink>
         <CustomLink href="/pricing">Árak</CustomLink>
